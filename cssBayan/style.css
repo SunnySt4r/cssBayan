@@ -36,7 +36,6 @@ input{
 }
 
 .invisible_part{
-    border: 3px gold solid;
     display: flex;
     justify-content: center;
     visibility: hidden;
@@ -44,13 +43,11 @@ input{
 }
 
 input:checked + label .invisible_part{
-    height: max-content;
     visibility: visible;
-    height: max-content;
+    height: 100px;
 }
 
 .other_item:hover .invisible_part{
-    height: max-content;
     visibility: visible;
-    height: max-content;
+    height: 100px;
 }
