@@ -8,9 +8,14 @@ body{
     margin: 0 auto;
 }
 
+.other_item{
+    background-color: blueviolet;
+    display:flexbox;
+}
+
 .visible_part{
-    display: grid;
-    justify-items: auto;
+    display: flex;
+    justify-content: space-between;
 }
 
 .mark{
@@ -18,18 +23,14 @@ body{
     background-color: red;
     width: 25px;
     height: 25px;
-    position: absolute;
-    margin-left: 96%;
-    justify-self: flex-end;
 }
 
 .text{
-    position: absolute;
     background-color: brown;
-    width: auto;
-    justify-self: flex-start;
 }
 
-.other_item{
-    background-color: blueviolet;
+.invisible_part{
+    border: 3px gold solid;
+    display: flex;
+    justify-content: center;
 }
