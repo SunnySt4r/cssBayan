@@ -1,3 +1,35 @@
-div{
+body{
+    width: 100%;
+    height: 100%;
+}
+
+.main{
+    width: 80%;
+    margin: 0 auto;
+}
+
+.visible_part{
+    display: grid;
+    justify-items: auto;
+}
+
+.mark{
+    background-image: url(img/add-outline.svg);
+    background-color: red;
+    width: 25px;
+    height: 25px;
+    position: absolute;
+    margin-left: 96%;
+    justify-self: flex-end;
+}
+
+.text{
+    position: absolute;
+    background-color: brown;
+    width: auto;
+    justify-self: flex-start;
+}
+
+.other_item{
     background-color: blueviolet;
 }
