@@ -1,0 +1,141 @@
+body{
+    width: 100%;
+    height: 100%;
+}
+
+.main{
+    width: 80%;
+    max-width: 40em;
+    margin: 0 auto;
+}
+
+input{
+    display: none;
+}
+
+.other_item{
+    padding-top: 1em;
+    padding-bottom: 1em;
+    height: fit-content;
+    display: flexbox;
+    border-bottom: solid gray;
+    cursor: pointer;
+}
+
+.visible_part{
+    display: flex;
+    justify-content: space-between;
+}
+
+.mark{
+    background-image: url(img/ellipsis-vertical-circle-outline.svg);
+    width: 1em;
+    height: 1em;
+    display: none;
+    transition: 0.5s linear;
+}
+
+.text{
+    font-size: larger ;
+    font-weight: bold;
+    color:forestgreen;
+}
+
+.invisible_part{
+    display: flex;
+    justify-content: center;
+    visibility: hidden;
+    height: 0em;
+    transition: 0.5s linear;
+}
+
+
+@media (max-width:320px){
+    .text{
+        font: optional;
+    }
+}
+
+@media (mix-width:321px) and (max-width:820px){
+    .text{
+        font-size: small;
+    }
+}
+
+@media (mix-width:821px) and (max-width:1920px){
+    .text{
+        color: darkred;
+    }
+}
+
+.main:hover .text{
+    color: black ;
+}
+
+.main:hover .mark{
+    display: block;
+}
+
+input:checked + label .invisible_part{
+    visibility: visible;
+    height: 25em;
+}
+
+input:checked + label .mark{
+    background-image: url(img/ellipsis-horizontal-circle-outline.svg);
+}
+
+input:checked + label .text{
+    color: black;
+}
+
+.other_item:hover .invisible_part{
+    visibility: visible;
+    height: 25em;
+}
+
+.other_item:hover .mark{
+    background-image: url(img/ellipsis-horizontal-circle-outline.svg);
+}
+
+.other_item:active .text{
+    color: forestgreen;
+}
+
+.other_item:active .image{
+    opacity: 0.8;
+}
+
+@media (max-width:1920px){
+    .text{
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+    }
+}
+
+@media (max-width:821px){
+    .text{
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    .other_item:hover .invisible_part{
+        visibility: visible;
+        height: 12em;
+    }
+    input:checked + label .invisible_part{
+        visibility: visible;
+        height: 12em;
+    }
+}
+
+@media (max-width:321px){
+    .text{
+        font-family: 'Courier New', Courier, monospace;
+    }
+    .other_item:hover .invisible_part{
+        visibility: visible;
+        height: 8em;
+    }
+    input:checked + label .invisible_part{
+        visibility: visible;
+        height: 8em;
+    }
+}
