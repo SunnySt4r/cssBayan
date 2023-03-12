@@ -8,9 +8,14 @@ body{
     margin: 0 auto;
 }
 
+input{
+    display: none;
+}
+
 .other_item{
-    background-color: blueviolet;
+    height: fit-content;
     display:flexbox;
+    border-bottom: 1px solid gray;
 }
 
 .visible_part{
@@ -26,6 +31,7 @@ body{
 }
 
 .text{
+    font-size: larger ;
     background-color: brown;
 }
 
@@ -33,4 +39,18 @@ body{
     border: 3px gold solid;
     display: flex;
     justify-content: center;
+    visibility: hidden;
+    height: 0px;
+}
+
+input:checked + label .invisible_part{
+    height: max-content;
+    visibility: visible;
+    height: max-content;
+}
+
+.other_item:hover .invisible_part{
+    height: max-content;
+    visibility: visible;
+    height: max-content;
 }
