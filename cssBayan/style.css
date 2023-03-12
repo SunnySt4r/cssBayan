@@ -13,8 +13,10 @@ input{
 }
 
 .other_item{
+    margin-top: 4px;
+    padding-bottom: 2px;
     height: fit-content;
-    display:flexbox;
+    display: flexbox;
     border-bottom: 1px solid gray;
 }
 
@@ -24,15 +26,14 @@ input{
 }
 
 .mark{
-    background-image: url(img/add-outline.svg);
-    background-color: red;
-    width: 25px;
-    height: 25px;
+    background-image: url(img/ellipsis-vertical-circle-outline.svg);
+    width: 20px;
+    height: 20px;
+    display: none;
 }
 
 .text{
     font-size: larger ;
-    background-color: brown;
 }
 
 .invisible_part{
@@ -42,12 +43,24 @@ input{
     height: 0px;
 }
 
+.main:hover .mark{
+    display: block;
+}
+
 input:checked + label .invisible_part{
     visibility: visible;
     height: 100px;
 }
 
+input:checked + label .mark{
+    background-image: url(img/ellipsis-horizontal-circle-outline.svg);
+}
+
 .other_item:hover .invisible_part{
     visibility: visible;
     height: 100px;
+}
+
+.other_item:hover .mark{
+    background-image: url(img/ellipsis-horizontal-circle-outline.svg);
 }
